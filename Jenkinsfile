@@ -11,14 +11,14 @@ pipeline {
         stage('Instalar dependencias') {
             steps {
                 echo 'Instalando dependencias...'
-                sh 'npm install'
+                bat 'npm install'
             }
         }
 
         stage('Ejecutar pruebas') {
             steps {
                 echo 'Ejecutando pruebas...'
-                sh 'npm test'
+                bat 'npm test'
             }
         }
     }
