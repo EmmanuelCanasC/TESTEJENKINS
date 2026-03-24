@@ -1,8 +1,8 @@
-    {
-  "name": "jenkins-test",
+{
+  "name": "jenkins-advanced",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "jest"
   }
 }

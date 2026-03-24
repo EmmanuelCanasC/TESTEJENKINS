@@ -2,22 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Clonar repositorio') {
-            steps {
-                echo 'Simulando clonación...'
-            }
-        }
-
         stage('Instalar dependencias') {
             steps {
-                echo 'Instalando dependencias...'
                 bat 'npm install'
             }
         }
 
-        stage('Ejecutar pruebas') {
+        stage('Ejecutar tests') {
             steps {
-                echo 'Ejecutando pruebas...'
                 bat 'npm test'
             }
         }
@@ -25,10 +17,10 @@ pipeline {
 
     post {
         success {
-            echo 'Build exitoso 🎉'
+            echo 'Todo funciona perfecto 🚀'
         }
         failure {
-            echo 'Build falló ❌'
+            echo 'Algo falló ❌'
         }
     }
 }
